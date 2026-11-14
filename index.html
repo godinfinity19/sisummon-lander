@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiSummon.com — Global Super Intelligence (SI) .COM Asset</title>
+  <meta name="description" content="Command-layer 8-letter .COM identity built for Super Intelligence (SI) agent orchestration, enterprise DevOps incident response, and automated discovery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-card: #0e1628;
+      --bg-elevated: #141f38;
+      --border: rgba(148, 163, 184, 0.18);
+      --border-accent: rgba(56, 189, 248, 0.45);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #818cf8;
+      --gold: #f59e0b;
+      --success: #10b981;
+      --danger: #f43f5e;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.12), transparent 36%),
+                  radial-gradient(circle at 85% 20%, rgba(129, 140, 248, 0.12), transparent 38%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Cairo', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    html[dir="rtl"] body {
+      font-family: 'Cairo', 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 24px 20px 64px; }
+
+    /* Top Nav */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px 18px;
+      background: rgba(14, 22, 40, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+      margin-bottom: 32px;
+    }
+    .brand-cluster { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+    }
+    .pill-gold {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+    .pill-green {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .lang-btn {
+      cursor: pointer;
+      background: var(--bg-elevated);
+      color: var(--text);
+      border: 1px solid var(--border-accent);
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-weight: 700;
+      font-size: 13px;
+      font-family: inherit;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .lang-btn:hover { background: rgba(56, 189, 248, 0.18); transform: translateY(-1px); }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    .domain-title {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 12px 0 10px;
+      line-height: 1.1;
+    }
+    .domain-title .si-glow {
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .domain-title .tld { color: var(--muted); font-weight: 700; }
+    .subtitle { font-size: 1.15rem; font-weight: 600; color: #e2e8f0; margin: 0 0 12px; }
+    .lead { color: var(--muted); font-size: 1rem; margin: 0 0 22px; max-width: 62ch; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .trust-item {
+      background: rgba(14, 22, 40, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .trust-item strong { display: block; font-size: 13px; color: var(--text); margin-bottom: 2px; }
+    .trust-item span { font-size: 12px; color: var(--muted); }
+
+    /* Acquisition Console Card */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+    .card-accent {
+      border-color: var(--border-accent);
+      background: linear-gradient(180deg, rgba(20, 31, 56, 0.96), rgba(14, 22, 40, 0.98));
+    }
+    .mode-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      background: rgba(7, 11, 20, 0.75);
+      padding: 5px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+    .mode-tab {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 8px;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+    .mode-tab.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(129, 140, 248, 0.22));
+      color: var(--text);
+      border: 1px solid var(--border-accent);
+    }
+    .price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .price-big { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--text); }
+    .price-sub { font-size: 13px; color: var(--muted); }
+    .savings-note {
+      margin: 10px 0 18px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      color: #6ee7b7;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: none;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #06101f;
+      box-shadow: 0 10px 26px rgba(56, 189, 248, 0.28);
+    }
+    .btn-secondary {
+      background: var(--bg-elevated);
+      color: var(--text);
+      border: 1px solid var(--border-accent);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #111827;
+    }
+    .rail-list {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .rail-list li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dashed rgba(148,163,184,0.14); }
+    .rail-list li:last-child { border-bottom: none; }
+    .mkt-strip {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.22);
+    }
+    .mkt-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .mkt-links { display: flex; flex-wrap: wrap; gap: 6px; }
+    .mkt-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      background: rgba(7, 11, 20, 0.72);
+      border: 1px solid var(--border);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .mkt-chip:hover { border-color: var(--accent); color: var(--text); }
+
+    /* LTO Calculator */
+    .lto-box { display: none; }
+    .lto-box.active, .bin-box.active, .offer-box.active { display: block; }
+    .bin-box, .offer-box { display: none; }
+    .slider-wrap { margin: 16px 0; }
+    input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer; }
+    .preset-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 16px; }
+    .preset-btn {
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      font-family: inherit;
+    }
+    .preset-btn.active { border-color: var(--accent); color: var(--text); background: rgba(56,189,248,0.16); }
+
+    /* Offer Form */
+    .field { margin-bottom: 12px; }
+    .field label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 5px; }
+    .field input, .field textarea {
+      width: 100%;
+      background: rgba(7, 11, 20, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+    }
+    .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+    .alert {
+      display: none;
+      margin-top: 12px;
+      padding: 11px 13px;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .alert.show { display: block; }
+    .alert-error { background: rgba(244, 63, 94, 0.14); border: 1px solid rgba(244, 63, 94, 0.4); color: #fda4af; }
+    .alert-ok { background: rgba(16, 185, 129, 0.14); border: 1px solid rgba(16, 185, 129, 0.4); color: #6ee7b7; }
+
+    /* Sections */
+    .section { margin-top: 42px; }
+    .section-title { font-size: 1.45rem; font-weight: 800; margin: 0 0 16px; }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .sector-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
+
+    /* Comparison Table */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 12px 14px; text-align: start; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .good { color: #34d399; font-weight: 600; }
+    .warn { color: #fbbf24; }
+
+    /* Bundle Banner */
+    .bundle-card {
+      margin-top: 42px;
+      background: linear-gradient(135deg, rgba(20, 31, 56, 0.95), rgba(30, 27, 75, 0.85));
+      border: 1px solid rgba(245, 158, 11, 0.42);
+      border-radius: var(--radius);
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 20px;
+      align-items: center;
+    }
+    @media (max-width: 820px) {
+      .bundle-card { grid-template-columns: 1fr; }
+    }
+    .suite-domains { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .suite-chip {
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: rgba(7, 11, 20, 0.65);
+      border: 1px solid var(--border);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 7, 18, 0.78);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      width: 100%;
+      max-width: 540px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .close-btn {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--text);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    .summary-pre {
+      background: rgba(7, 11, 20, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      margin: 12px 0;
+    }
+    .modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="topbar">
+      <div class="brand-cluster">
+        <span class="pill" data-en="8-Letter .COM Global Asset" data-ar="أصل .COM عالمي من 8 أحرف">8-Letter .COM Global Asset</span>
+        <span class="pill pill-green" data-en="Same-Day GoDaddy Account Push" data-ar="نقل فوري بنفس اليوم عبر GoDaddy Push">Same-Day GoDaddy Account Push</span>
+        <span class="pill pill-gold" data-en="Spaceship SafePay (5%) · Atom Pay (7.5%) · Escrow.com" data-ar="ضمان Spaceship SafePay (5%) · Atom Pay · Escrow">Spaceship SafePay (5%) · Atom Pay (7.5%) · Escrow.com</span>
+      </div>
+      <button class="lang-btn" id="langToggle" type="button">العربية / AR</button>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="pill" data-en="Triple-Sector SI Brand Asset" data-ar="أصل علامة تجارية لثلاثة قطاعات">Triple-Sector SI Brand Asset</div>
+        <h1 class="domain-title"><span class="si-glow">Si</span>Summon<span class="tld">.com</span></h1>
+        <p class="subtitle" data-en="Command-Layer Identity for Super Intelligence Orchestration" data-ar="هوية طبقة الأوامر لتنسيق أنظمة الذكاء الفائق (SI)">Command-Layer Identity for Super Intelligence Orchestration</p>
+        <p class="lead" data-en="Command-layer 8-letter .COM identity built for Super Intelligence (SI) agent orchestration, enterprise DevOps incident response, and automated discovery." data-ar="نطاق .COM مميز من 8 أحرف مخصّص لطبقة الأوامر في تنسيق وكلاء الذكاء الفائق (SI)، واستجابة الحوادث البرمجية للمؤسسات، والاستكشاف المؤتمت.">Command-layer 8-letter .COM identity built for Super Intelligence (SI) agent orchestration, enterprise DevOps incident response, and automated discovery.</p>
+
+        <div class="trust-grid">
+          <div class="trust-item">
+            <strong data-en="Instant Delivery via GoDaddy Push" data-ar="تسليم فوري عبر GoDaddy Account Push">Instant Delivery via GoDaddy Push</strong>
+            <span data-en="Registered at GoDaddy (Nov 12, 2026). External EPP transfer unlocks Jan 11, 2027; instant account push active today." data-ar="مسجّل لدى GoDaddy (12 نوفمبر 2026). النقل الخارجي EPP يُفتح في 11 يناير 2027؛ الدفع الداخلي الفوري متاح اليوم.">Registered at GoDaddy (Nov 12, 2026). External EPP transfer unlocks Jan 11, 2027; instant account push active today.</span>
+          </div>
+          <div class="trust-item">
+            <strong data-en="0%-Markup Lease-to-Own" data-ar="تقسيط حتى التملك بدون أي فوائد (0%)">0%-Markup Lease-to-Own</strong>
+            <span data-en="Start using the domain immediately for $291/mo over 12 months with zero interest." data-ar="ابدأ استخدام النطاق فورًا مقابل $291 شهريًا لمدة 12 شهرًا بدون أي زيادة.">Start using the domain immediately for $291/mo over 12 months with zero interest.</span>
+          </div>
+          <div class="trust-item">
+            <strong data-en="Direct Low-Fee Savings" data-ar="وفر عمولات الوسطاء بالشراء المباشر">Direct Low-Fee Savings</strong>
+            <span data-en="Direct BIN ($3488) saves $700 vs. external syndicate BIN ($4188)." data-ar="الشراء المباشر ($3488) يوفر عليك $700 مقارنة بسعر الشبكات الخارجية ($4188).">Direct BIN ($3488) saves $700 vs. external syndicate BIN ($4188).</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card card-accent" aria-label="Acquisition Console">
+        <div class="mode-tabs" role="tablist">
+          <button class="mode-tab active" data-tab="bin" type="button" data-en="Buy Now" data-ar="شراء فوري">Buy Now</button>
+          <button class="mode-tab" data-tab="lto" type="button" data-en="Lease-to-Own" data-ar="تقسيط 0%">Lease-to-Own</button>
+          <button class="mode-tab" data-tab="offer" type="button" data-en="Make Offer" data-ar="تقديم عرض">Make Offer</button>
+        </div>
+
+        <!-- TAB 1: BUY NOW -->
+        <div class="bin-box active" id="panel-bin">
+          <div class="price-row">
+            <div class="price-big">$3,488</div>
+            <div class="price-sub" data-en="USD · Direct Low-Fee BIN" data-ar="دولار · سعر الشراء المباشر">USD · Direct Low-Fee BIN</div>
+          </div>
+          <div class="savings-note" data-en="Direct Checkout Advantage: Save $700 off the $4,188 broker syndicate price via Spaceship SafePay (5% rail)." data-ar="ميزة الشراء المباشر: وفّر $700 عن سعر المنصات الخارجية ($4,188) عبر Spaceship SafePay بعمولة 5%.">
+            Direct Checkout Advantage: Save $700 off the $4,188 broker syndicate price via Spaceship SafePay (5% rail).
+          </div>
+          <button class="btn btn-primary" id="btnBuyNow" type="button" data-en="Acquire SiSummon.com Now — $3,488" data-ar="امتلك SiSummon.com الآن — $3,488">Acquire SiSummon.com Now — $3,488</button>
+          <ul class="rail-list">
+            <li><span data-en="Primary Escrow Rail" data-ar="مسار الضمان الأساسي">Primary Escrow Rail</span><strong>Spaceship SafePay (5%)</strong></li>
+            <li><span data-en="Alternative Checkout" data-ar="خيار الدفع البديل">Alternative Checkout</span><strong><a href="https://www.atom.com/view/name/sisummon.com" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Atom Pay (7.5%)</a> / Escrow.com</strong></li>
+            <li><span data-en="Transfer Speed" data-ar="سرعة التسليم">Transfer Speed</span><strong data-en="Same-Day GoDaddy Push" data-ar="نقل فوري بنفس اليوم">Same-Day GoDaddy Push</strong></li>
+          </ul>
+          <div class="mkt-strip">
+            <div class="mkt-title" data-en="Verified Global Marketplaces" data-ar="متاح ومُوثّق على المنصات العالمية">Verified Global Marketplaces</div>
+            <div class="mkt-links">
+              <a class="mkt-chip" href="https://www.atom.com/view/name/sisummon.com" target="_blank" rel="noopener noreferrer">Atom.com ($3,488)</a>
+              <a class="mkt-chip" href="https://www.afternic.com/domain/sisummon.com" target="_blank" rel="noopener noreferrer">Afternic / GoDaddy ($4,188)</a>
+              <a class="mkt-chip" href="https://sedo.com/search/details/?domain=sisummon.com" target="_blank" rel="noopener noreferrer">Sedo Escrow ($4,188)</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: LTO CALCULATOR -->
+        <div class="lto-box" id="panel-lto">
+          <div class="price-row">
+            <div class="price-big" id="ltoMonthlyDisplay">$291/mo</div>
+            <div class="price-sub" id="ltoTermLabel">12 months · 0% Markup</div>
+          </div>
+          <div class="slider-wrap">
+            <label for="ltoSlider" class="price-sub" data-en="Select Payment Term (2 to 12 months, 0% interest):" data-ar="اختر مدة التقسيط (من 2 إلى 12 شهرًا بدون فوائد):">Select Payment Term (2 to 12 months, 0% interest):</label>
+            <input id="ltoSlider" type="range" min="2" max="12" value="12" />
+          </div>
+          <div class="preset-row" id="ltoPresets"></div>
+          <div class="savings-note" id="ltoSummaryNote"></div>
+          <button class="btn btn-primary" id="btnStartLto" type="button" data-en="Start 0%-Markup Lease-to-Own" data-ar="ابدأ خطة التقسيط بدون فوائد">Start 0%-Markup Lease-to-Own</button>
+        </div>
+
+        <!-- TAB 3: MAKE OFFER -->
+        <div class="offer-box" id="panel-offer">
+          <div class="price-row" style="margin-bottom:10px;">
+            <div class="price-sub" data-en="Strict Minimum Offer Floor:" data-ar="الحد الأدنى الصارم للعروض:">Strict Minimum Offer Floor:</div>
+            <strong style="color:var(--accent); font-size:1.1rem;">$1,999 USD</strong>
+          </div>
+          <form id="offerForm" novalidate>
+            <div class="field">
+              <label for="offerAmount" data-en="Your Offer (USD)" data-ar="قيمة العرض (بالدولار)">Your Offer (USD)</label>
+              <input id="offerAmount" type="number" min="1" step="1" placeholder="e.g. 1999" required />
+            </div>
+            <div class="field">
+              <label for="buyerName" data-en="Full Name & Role" data-ar="الاسم الكامل والمنصب">Full Name & Role</label>
+              <input id="buyerName" type="text" placeholder="Alex Rivera, CTO" required />
+            </div>
+            <div class="field">
+              <label for="buyerEmail" data-en="Work Email" data-ar="البريد الإلكتروني للشركة">Work Email</label>
+              <input id="buyerEmail" type="email" placeholder="alex@company.com" required />
+            </div>
+            <div class="field">
+              <label for="buyerCompany" data-en="Company / Current Domain" data-ar="اسم الشركة / النطاق الحالي">Company / Current Domain</label>
+              <input id="buyerCompany" type="text" placeholder="Acme Superintelligence" />
+            </div>
+            <button class="btn btn-secondary" type="submit" data-en="Submit Verified Offer" data-ar="إرسال العرض للمراجعة">Submit Verified Offer</button>
+            <div class="alert" id="offerFeedback"></div>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <!-- TRIPLE INDUSTRY SECTION -->
+    <section class="section">
+      <h2 class="section-title" data-en="Triple-Industry Strategic Fit" data-ar="تموضع استراتيجي عبر ثلاثة قطاعات عالية السيولة">Triple-Industry Strategic Fit</h2>
+      <div class="grid-3">
+                <article class="card">
+          <span class="sector-tag" data-en="Super Intelligence (SI)" data-ar="الذكاء الفائق (SI)">Super Intelligence (SI)</span>
+          <h3 data-en="Autonomous Agent Invocation & Control" data-ar="استدعاء الوكلاء المستقلين والتحكم المركزي">Autonomous Agent Invocation & Control</h3>
+          <p data-en="A natural verb-led command brand for multi-agent summoning, model routing, and real-time DevOps incident response." data-ar="اسم فعلي مباشر لمنصات استدعاء الوكلاء المتعددين وتوجيه النماذج واستجابة أعطال البنية التحتية للمؤسسات.">A natural verb-led command brand for multi-agent summoning, model routing, and real-time DevOps incident response.</p>
+        </article>
+        <article class="card">
+          <span class="sector-tag" data-en="Silicon (Si) Photonics" data-ar="ضوئيات السيليكون (Si)">Silicon (Si) Photonics</span>
+          <h3 data-en="Chip Bring-Up & Automated Diagnostics" data-ar="تفعيل الرقائق والتشخيص المؤتمت">Chip Bring-Up & Automated Diagnostics</h3>
+          <p data-en="Ideal for silicon validation suites, wafer test orchestration, and automated hardware telemetry discovery." data-ar="مثالي لمنصات التحقق من الرقائق، وتنسيق اختبارات السيليكون، واكتشاف بيانات القياس العتادية تلقائيًا.">Ideal for silicon validation suites, wafer test orchestration, and automated hardware telemetry discovery.</p>
+        </article>
+        <article class="card">
+          <span class="sector-tag" data-en="Systems Integration (SI)" data-ar="تكامل الأنظمة (SI)">Systems Integration (SI)</span>
+          <h3 data-en="Enterprise API & Service Dispatch" data-ar="ربط الخدمات وتوجيه واجهات المؤسسات">Enterprise API & Service Dispatch</h3>
+          <p data-en="Built for enterprise integrators deploying unified command consoles across cloud, ERP, and edge clusters." data-ar="مصمم لشركات تكامل الأنظمة التي تدير لوحات تحكم موحدة عبر السحابة وأنظمة تخطيط الموارد.">Built for enterprise integrators deploying unified command consoles across cloud, ERP, and edge clusters.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MARKET THESIS -->
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title" data-en="September 2026 SI Catalyst: Why .COM Beats .si Globally" data-ar="تحول سبتمبر 2026 للذكاء الفائق (SI): لماذا يتفوق .COM عالميًا على .si؟">September 2026 SI Catalyst: Why .COM Beats .si Globally</h2>
+        <p class="lead" style="max-width:none; margin-bottom:18px;" data-en="Following the September 2026 industry shift toward Super Intelligence (SI), .si domain registrations surged +2,199% (from 3,515 in August to 46,066 in September 2026), with aftermarket benchmarks such as Recursive.si ($20,000), Otherwise.si ($18,888), and SiSearch.com (~$1,500). However, .si remains Slovenia's country-code TLD (ccTLD), whereas an exact SI + Keyword .COM asset secures global authority." data-ar="عقب تحول سبتمبر 2026 نحو مصطلح الذكاء الفائق (Super Intelligence - SI)، قفزت تسجيلات نطاقات .si بنسبة +2,199% (من 3,515 في أغسطس إلى 46,066 في سبتمبر 2026)، مع مبيعات مثل Recursive.si بـ 20,000$ وOtherwise.si بـ 18,888$ وSiSearch.com بنحو 1,500$. لكن امتداد .si يُصنّف جغرافيًا لسلوفينيا (ccTLD)، بينما يمنحك .COM سلطة عالمية مطلقة.">
+          Following the September 2026 industry shift toward Super Intelligence (SI), .si domain registrations surged +2,199% (from 3,515 in August to 46,066 in September 2026), with aftermarket benchmarks such as Recursive.si ($20,000), Otherwise.si ($18,888), and SiSearch.com (~$1,500). However, .si remains Slovenia's country-code TLD (ccTLD), whereas an exact SI + Keyword .COM asset secures global authority.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-en="Enterprise Criterion" data-ar="المعيار المؤسسي">Enterprise Criterion</th>
+                <th data-en="SiSummon.com (.COM)" data-ar="SiSummon.com (.COM)">SiSummon.com (.COM)</th>
+                <th data-en=".si Alternative (ccTLD)" data-ar="البديل على امتداد .si">Alternative (.si ccTLD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-en="Google Geo-Targeting" data-ar="الاستهداف الجغرافي في Google">Google Geo-Targeting</td>
+                <td class="good" data-en="Global generic TLD — unrestricted worldwide ranking" data-ar="امتداد عالمي عام — تصدّر غير مقيد في كل الأسواق">Global generic TLD — unrestricted worldwide ranking</td>
+                <td class="warn" data-en="Classified as Slovenia country-code TLD (ccTLD)" data-ar="يُصنّف كنطاق دولة خاص بسلوفينيا فقط">Classified as Slovenia country-code TLD (ccTLD)</td>
+              </tr>
+              <tr>
+                <td data-en="Enterprise Email & Security" data-ar="ثقة البريد المؤسسي والأمان">Enterprise Email & Security</td>
+                <td class="good" data-en="Highest B2B inbox trust & zero-friction type-in" data-ar="أعلى موثوقية وصول للبريد التنفيذي وحفظ تلقائي">Highest B2B inbox trust & zero-friction type-in</td>
+                <td class="warn" data-en="Often flagged unfamiliar by corporate spam filters" data-ar="قد يثير التباسًا لدى مرشحات البريد المؤسسية">Often flagged unfamiliar by corporate spam filters</td>
+              </tr>
+              <tr>
+                <td data-en="Acquisition Price vs .si Comps" data-ar="تكلفة التملك مقارنة بمبيعات .si">Acquisition Price vs .si Comps</td>
+                <td class="good" data-en="$3,488 Direct BIN (or $291/mo 0% LTO)" data-ar="$3,488 شراء مباشر (أو $291/شهر بدون فوائد)">$3,488 Direct BIN (or $291/mo 0% LTO)</td>
+                <td class="warn" data-en="$18,888–$20,000 observed for category .si leaders" data-ar="مبيعات .si القيادية وصلت إلى $18,888–$20,000">$18,888–$20,000 observed for category .si leaders</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-DOMAIN SUITE BUNDLE -->
+    <section class="bundle-card">
+      <div>
+        <span class="pill pill-gold" data-en="Full-Stack SI Portfolio Acquisition" data-ar="استحواذ الحزمة الكاملة (3 نطاقات)">Full-Stack SI Portfolio Acquisition</span>
+        <h2 class="section-title" style="margin:12px 0 8px;" data-en="Acquire All 3 SI Suite .COM Domains Together" data-ar="امتلك باقة الذكاء الفائق الثلاثية (.COM) كاملة">Acquire All 3 SI Suite .COM Domains Together</h2>
+        <p class="lead" style="margin-bottom:10px;" data-en="Lock down the entire Super Intelligence product stack: Agent Command (SiSummon.com), Copilot & Photonics Routing (SiGuider.com), and Front-Office UI (SiForFront.com)." data-ar="أحكم سيطرتك على البنية الكاملة: طبقة الأوامر (SiSummon.com)، والتوجيه والمساعدات (SiGuider.com)، والواجهات الأمامية (SiForFront.com).">
+          Lock down the entire Super Intelligence product stack: Agent Command (SiSummon.com), Copilot & Photonics Routing (SiGuider.com), and Front-Office UI (SiForFront.com).
+        </p>
+        <div class="suite-domains">
+          <span class="suite-chip">SiSummon.com</span>
+          <span class="suite-chip">SiGuider.com</span>
+          <span class="suite-chip">SiForFront.com</span>
+        </div>
+      </div>
+      <div style="text-align:start;">
+        <div class="price-big">$7,488</div>
+        <div class="price-sub" style="margin-bottom:12px;" data-en="Direct Suite BIN (Save $876) · or $624/mo × 12 mo (0% Markup) · Min Floor $5,497" data-ar="سعر الباقة المباشر (توفير 876$) · أو 624$/شهر × 12 شهرًا · حد أدنى 5,497$">Direct Suite BIN (Save $876) · or $624/mo × 12 mo (0% Markup) · Min Floor $5,497</div>
+        <button class="btn btn-gold" id="btnBundle" type="button" data-en="Acquire 3-Domain Suite — $7,488" data-ar="استحوذ على الباقة الثلاثية — $7,488">Acquire 3-Domain Suite — $7,488</button>
+      </div>
+    </section>
+
+    <footer>
+      <p data-en="Asset Portfolio Managed on behalf of Nabil Ahmed (Zac) · Registrar: GoDaddy (Instant Account Push active; external EPP unlocked Jan 11, 2027). SiSummon.com is positioned strictly on its generic descriptive technology meaning across Super Intelligence (SI), Silicon (Si) Photonics, and Systems Integration (SI), with zero affiliation to third-party marks." data-ar="إدارة المحفظة بالنيابة عن نبيل أحمد (Zac) · المسجّل: GoDaddy (نقل فوري عبر Account Push متاح اليوم؛ النقل الخارجي متاح بعد 11 يناير 2027). يُطرح نطاق SiSummon.com بناءً على معناه التقني الوصفي العام في الذكاء الفائق وضوئيات السيليكون وتكامل الأنظمة فقط دون أي صلة بعلامات تجارية خاصة.">
+        Asset Portfolio Managed on behalf of Nabil Ahmed (Zac) · Registrar: GoDaddy (Instant Account Push active; external EPP unlocked Jan 11, 2027). SiSummon.com is positioned strictly on its generic descriptive technology meaning across Super Intelligence (SI), Silicon (Si) Photonics, and Systems Integration (SI), with zero affiliation to third-party marks.
+      </p>
+    </footer>
+  </div>
+
+  <!-- CHECKOUT / ESCROW MODAL -->
+  <div class="modal-backdrop" id="checkoutModal" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-head">
+        <strong id="modalTitle" style="font-size:1.1rem;">Acquisition Order</strong>
+        <button class="close-btn" id="closeModal" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="price-sub" id="modalSubtitle"></div>
+      <pre class="summary-pre" id="modalSummary"></pre>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="copyOrderBtn" type="button" data-en="Copy Order Summary" data-ar="نسخ تفاصيل الطلب">Copy Order Summary</button>
+        <a class="btn btn-primary" id="proceedRailBtn" href="#offer" data-en="Open Escrow Checkout" data-ar="إتمام الدفع عبر الضمان">Open Escrow Checkout</a>
+      </div>
+      <div class="alert" id="modalToast"></div>
+    </div>
+  </div>
+
+  <script>
+    // Update live URLs below immediately after publishing & verifying on Spaceship SellerHub / Atom Standard
+    const CHECKOUT_CONFIG = {
+      domain: "SiSummon.com",
+      directBin: 3488,
+      minFloor: 1999,
+      maxLtoMonths: 12,
+      syndicateBin: 4188,
+      bundleBin: 7488,
+      bundleFloor: 5497,
+      bundleLtoMonths: 12,
+      bundleMonthly: 624,
+      spaceshipDirectCheckoutUrl: "https://www.spaceship.com/s/buy/sisummon.com/fGEXoevW0GbTkfkk", // Spaceship SafePay (5% sellerFeeShare=100) Direct BIN checkout link
+      spaceshipLtoCheckoutUrl: "https://www.spaceship.com/s/buy/sisummon.com/tcWoA0rFI3Vsk93F",       // Spaceship SafePay (5% sellerFeeShare=100) LTO checkout link
+      atomStandardUrl: "https://www.atom.com/view/name/sisummon.com",               // Non-exclusive Atom Standard (7.5%) lander/checkout URL
+      spaceshipExpiresIso: "2026-11-21T16:00:00Z",
+      sedoUrl: "https://sedo.com/search/details/?domain=sisummon.com",
+      afternicUrl: "https://www.afternic.com/domain/sisummon.com",
+      brokerEmail: "contact@tarotreadingglobal.com"
+    };
+
+    let lang = "en";
+
+    function fmt(num) {
+      return Number(num).toLocaleString("en-US");
+    }
+
+    function applyLang(nextLang) {
+      lang = nextLang;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      document.getElementById("langToggle").textContent = lang === "ar" ? "English / EN" : "العربية / AR";
+      document.querySelectorAll("[data-en]").forEach((el) => {
+        el.textContent = el.getAttribute(lang === "ar" ? "data-ar" : "data-en");
+      });
+      renderLto(Number(document.getElementById("ltoSlider").value));
+    }
+
+    document.getElementById("langToggle").addEventListener("click", () => {
+      applyLang(lang === "en" ? "ar" : "en");
+    });
+
+    // Mode Tabs
+    document.querySelectorAll(".mode-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".mode-tab").forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        const target = tab.getAttribute("data-tab");
+        ["bin", "lto", "offer"].forEach((id) => {
+          document.getElementById("panel-" + id).classList.toggle("active", id === target);
+        });
+      });
+    });
+
+    // LTO Calculator (0% Markup)
+    const slider = document.getElementById("ltoSlider");
+    const presetContainer = document.getElementById("ltoPresets");
+    const presetSteps = [3, 6, CHECKOUT_CONFIG.maxLtoMonths].filter((v, i, a) => v <= CHECKOUT_CONFIG.maxLtoMonths && a.indexOf(v) === i);
+
+    function renderPresets(activeMonths) {
+      presetContainer.innerHTML = "";
+      presetSteps.forEach((m) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "preset-btn" + (m === activeMonths ? " active" : "");
+        btn.textContent = lang === "ar" ? `${m} شهرًا` : `${m} mo`;
+        btn.addEventListener("click", () => {
+          slider.value = String(m);
+          renderLto(m);
+        });
+        presetContainer.appendChild(btn);
+      });
+    }
+
+    function renderLto(months) {
+      const monthly = Math.ceil(CHECKOUT_CONFIG.directBin / months);
+      document.getElementById("ltoMonthlyDisplay").textContent = `$${fmt(monthly)}/mo`;
+      document.getElementById("ltoTermLabel").textContent =
+        lang === "ar"
+          ? `${months} شهرًا · 0% فائدة`
+          : `${months} months · 0% Markup`;
+      document.getElementById("ltoSummaryNote").textContent =
+        lang === "ar"
+          ? `الإجمالي بدون أي زيادة: $${fmt(CHECKOUT_CONFIG.directBin)} — تحصل على تحكم DNS فور الدفعة الأولى ($${fmt(monthly)}).`
+          : `Total 0%-markup cost: $${fmt(CHECKOUT_CONFIG.directBin)} — full DNS & usage rights start on your first $${fmt(monthly)} payment.`;
+      renderPresets(months);
+    }
+
+    slider.addEventListener("input", (e) => renderLto(Number(e.target.value)));
+    renderLto(CHECKOUT_CONFIG.maxLtoMonths);
+
+    function isSpaceshipActive() {
+      return Date.now() < Date.parse(CHECKOUT_CONFIG.spaceshipExpiresIso);
+    }
+
+    function resolveCheckoutRail(kind) {
+      if (isSpaceshipActive()) {
+        return {
+          url: kind === "lto"
+            ? (CHECKOUT_CONFIG.spaceshipLtoCheckoutUrl || CHECKOUT_CONFIG.spaceshipDirectCheckoutUrl)
+            : CHECKOUT_CONFIG.spaceshipDirectCheckoutUrl,
+          labelEn: "Proceed to Spaceship SafePay (5%)",
+          labelAr: "الانتقال لبوابة Spaceship الآمنة (5%)",
+          railNote: "Spaceship SafePay (5% fee)"
+        };
+      }
+      return {
+        url: CHECKOUT_CONFIG.atomStandardUrl,
+        labelEn: "Proceed to Atom.com Escrow (7.5%)",
+        labelAr: "الانتقال لبوابة Atom الآمنة (7.5%)",
+        railNote: "Atom.com Escrow Pay (7.5% fee)"
+      };
+    }
+
+    // Modal Helper
+    const modal = document.getElementById("checkoutModal");
+    function openCheckoutModal({ title, subtitle, summary, checkoutUrl, proceedLabelEn, proceedLabelAr, mailSubject }) {
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalSubtitle").textContent = subtitle;
+      document.getElementById("modalSummary").textContent = summary;
+      const toast = document.getElementById("modalToast");
+      toast.className = "alert";
+      toast.textContent = "";
+
+      const proceedBtn = document.getElementById("proceedRailBtn");
+      if (checkoutUrl) {
+        proceedBtn.href = checkoutUrl;
+        proceedBtn.target = "_blank";
+        proceedBtn.rel = "noopener noreferrer";
+        proceedBtn.textContent = lang === "ar"
+          ? (proceedLabelAr || "الانتقال لبوابة Spaceship الآمنة")
+          : (proceedLabelEn || "Proceed to Spaceship SafePay");
+      } else {
+        proceedBtn.href = `mailto:${CHECKOUT_CONFIG.brokerEmail}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(summary)}`;
+        proceedBtn.removeAttribute("target");
+        proceedBtn.textContent = lang === "ar" ? "إرسال طلب رابط الدفع (5%)" : "Request Direct Checkout Link (5%)";
+      }
+      modal.classList.add("open");
+    }
+
+    document.getElementById("closeModal").addEventListener("click", () => modal.classList.remove("open"));
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.remove("open");
+    });
+
+    document.getElementById("copyOrderBtn").addEventListener("click", async () => {
+      const text = document.getElementById("modalSummary").textContent;
+      const toast = document.getElementById("modalToast");
+      try {
+        await navigator.clipboard.writeText(text);
+        toast.className = "alert alert-ok show";
+        toast.textContent = lang === "ar" ? "تم نسخ ملخص الطلب بنجاح." : "Order summary copied to clipboard.";
+      } catch {
+        toast.className = "alert alert-error show";
+        toast.textContent = lang === "ar" ? "انسخ النص يدويًا من الصندوق أعلاه." : "Please copy the text manually from the box above.";
+      }
+    });
+
+    // Buy Now Action
+    document.getElementById("btnBuyNow").addEventListener("click", () => {
+      const rail = resolveCheckoutRail("bin");
+      const summary = [
+        `Asset: ${CHECKOUT_CONFIG.domain}`,
+        `Purchase Type: Direct Buy-It-Now (BIN)`,
+        `Price: $${fmt(CHECKOUT_CONFIG.directBin)} USD`,
+        `Preferred Rail: ${rail.railNote} — Fallback: Atom Pay (7.5%) or Escrow.com`,
+        `Delivery: Same-Day GoDaddy Account Push (60-day transfer lock active until Jan 11, 2027)`
+      ].join("\n");
+      openCheckoutModal({
+        title: lang === "ar" ? `شراء ${CHECKOUT_CONFIG.domain} مباشرة` : `Acquire ${CHECKOUT_CONFIG.domain} — Direct BIN`,
+        subtitle: isSpaceshipActive()
+          ? (lang === "ar" ? "الدفع عبر Spaceship SafePay (5%) والتسليم الفوري عبر GoDaddy Push" : "Protected checkout via Spaceship SafePay (5%) with Same-Day GoDaddy Push")
+          : (lang === "ar" ? "الدفع الآمن عبر Atom.com Escrow (7.5%) والتسليم الفوري عبر GoDaddy Push" : "Protected checkout via Atom.com Escrow (7.5%) with Same-Day GoDaddy Push"),
+        summary,
+        checkoutUrl: rail.url,
+        proceedLabelEn: rail.labelEn,
+        proceedLabelAr: rail.labelAr,
+        mailSubject: `Direct BIN Checkout Request: ${CHECKOUT_CONFIG.domain} ($${fmt(CHECKOUT_CONFIG.directBin)})`
+      });
+    });
+
+    // LTO Action
+    document.getElementById("btnStartLto").addEventListener("click", () => {
+      const rail = resolveCheckoutRail("lto");
+      const months = Number(slider.value);
+      const monthly = Math.ceil(CHECKOUT_CONFIG.directBin / months);
+      const summary = [
+        `Asset: ${CHECKOUT_CONFIG.domain}`,
+        `Purchase Type: 0%-Markup Lease-to-Own`,
+        `Total Price: $${fmt(CHECKOUT_CONFIG.directBin)} USD`,
+        `Schedule: $${fmt(monthly)}/mo x ${months} months (0% interest)`,
+        `Rail: ${rail.railNote} / Atom Pay LTO`,
+        `Delivery: Immediate DNS delegation on 1st payment; GoDaddy Account Push upon final installment`
+      ].join("\n");
+      openCheckoutModal({
+        title: lang === "ar" ? `تقسيط ${CHECKOUT_CONFIG.domain} بدون فوائد` : `0%-Markup Lease-to-Own — ${CHECKOUT_CONFIG.domain}`,
+        subtitle: lang === "ar" ? `${months} دفعة شهرية بقيمة $${fmt(monthly)}/شهر` : `${months} monthly installments of $${fmt(monthly)}/mo`,
+        summary,
+        checkoutUrl: rail.url,
+        proceedLabelEn: rail.labelEn,
+        proceedLabelAr: rail.labelAr,
+        mailSubject: `0% LTO Request: ${CHECKOUT_CONFIG.domain} ($${fmt(monthly)}/mo x ${months}mo)`
+      });
+    });
+
+    // 3-Domain Bundle Action
+    document.getElementById("btnBundle").addEventListener("click", () => {
+      const summary = [
+        `Assets: SiSummon.com + SiGuider.com + SiForFront.com (3-Domain SI Suite)`,
+        `Purchase Type: Direct Suite BIN or 12-Month 0% LTO`,
+        `Suite BIN: $${fmt(CHECKOUT_CONFIG.bundleBin)} USD (or $${CHECKOUT_CONFIG.bundleMonthly}/mo x ${CHECKOUT_CONFIG.bundleLtoMonths} mo, Min Floor $${fmt(CHECKOUT_CONFIG.bundleFloor)})`,
+        `Rail: Spaceship SafePay (5%) or Escrow.com`,
+        `Delivery: Same-Day GoDaddy Account Push for all 3 .COM domains`
+      ].join("\n");
+      openCheckoutModal({
+        title: lang === "ar" ? "استحواذ باقة الـ 3 نطاقات (SI Suite)" : "3-Domain SI Suite Bundle Acquisition",
+        subtitle: lang === "ar" ? "SiSummon.com + SiGuider.com + SiForFront.com بسعر $7,488" : "SiSummon.com + SiGuider.com + SiForFront.com — $7,488 Direct BIN",
+        summary,
+        checkoutUrl: "",
+        mailSubject: "3-Domain SI Suite Bundle Request ($7,488 Direct BIN)"
+      });
+    });
+
+    // Offer Form Validation (Strict Floor Enforcement)
+    document.getElementById("offerForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const amount = Number(document.getElementById("offerAmount").value);
+      const name = document.getElementById("buyerName").value.trim();
+      const email = document.getElementById("buyerEmail").value.trim();
+      const company = document.getElementById("buyerCompany").value.trim();
+      const feedback = document.getElementById("offerFeedback");
+
+      if (!amount || Number.isNaN(amount)) {
+        feedback.className = "alert alert-error show";
+        feedback.textContent = lang === "ar" ? "يرجى إدخال قيمة عرض صحيحة بالدولار." : "Please enter a valid offer amount in USD.";
+        return;
+      }
+
+      if (amount < CHECKOUT_CONFIG.minFloor) {
+        const ltoMo = Math.ceil(CHECKOUT_CONFIG.directBin / CHECKOUT_CONFIG.maxLtoMonths);
+        feedback.className = "alert alert-error show";
+        feedback.textContent =
+          lang === "ar"
+            ? `عذرًا، الحد الأدنى المقبول لنطاق ${CHECKOUT_CONFIG.domain} هو $${fmt(CHECKOUT_CONFIG.minFloor)}. يمكنك التملك فورًا بدون فوائد عبر خطة التقسيط: $${fmt(ltoMo)}/شهر لمدة ${CHECKOUT_CONFIG.maxLtoMonths} شهرًا.`
+            : `Offers below the strict $${fmt(CHECKOUT_CONFIG.minFloor)} floor cannot be accepted for ${CHECKOUT_CONFIG.domain}. Bridge the budget instantly with 0%-markup Lease-to-Own at $${fmt(ltoMo)}/mo (${CHECKOUT_CONFIG.maxLtoMonths} mo).`;
+        return;
+      }
+
+      if (!name || !email || !email.includes("@")) {
+        feedback.className = "alert alert-error show";
+        feedback.textContent = lang === "ar" ? "يرجى إدخال الاسم والبريد الإلكتروني الصحيح لإتمام العرض." : "Please enter your name and valid work email to submit your verified offer.";
+        return;
+      }
+
+      feedback.className = "alert alert-ok show";
+      feedback.textContent = lang === "ar" ? "العرض متوافق مع الحد الأدنى! جارٍ فتح ملخص التوثيق والإغلاق." : "Offer meets the verified floor! Opening acquisition checkout summary.";
+
+      const summary = [
+        `Asset: ${CHECKOUT_CONFIG.domain}`,
+        `Verified Offer: $${fmt(amount)} USD (Floor: $${fmt(CHECKOUT_CONFIG.minFloor)} | Direct BIN: $${fmt(CHECKOUT_CONFIG.directBin)})`,
+        `Buyer: ${name}`,
+        `Work Email: ${email}`,
+        `Company: ${company || "N/A"}`,
+        `Closing Rail: Spaceship SafePay (5%) / Atom Pay (7.5%) / Escrow.com`,
+        `Delivery: Same-Day GoDaddy Account Push`
+      ].join("\n");
+      openCheckoutModal({
+        title: lang === "ar" ? `ملخص عرض الاستحواذ — $${fmt(amount)}` : `Verified Offer Summary — $${fmt(amount)}`,
+        subtitle: lang === "ar" ? "الخطوة التالية: تأكيد وإرسال العرض عبر قناة الضمان" : "Next step: Dispatch offer for immediate Spaceship SafePay / Escrow link",
+        summary,
+        checkoutUrl: "",
+        mailSubject: `Verified Offer for ${CHECKOUT_CONFIG.domain}: $${fmt(amount)} USD`
+      });
+    });
+  </script>
+</body>
+</html>
